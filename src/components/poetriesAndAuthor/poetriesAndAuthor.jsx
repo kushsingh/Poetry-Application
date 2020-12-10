@@ -78,7 +78,7 @@ const PoetryPage = (props) => {
                     <AutocompleteSearch options={poetry} onChange={onPoetrySelection} />
                 </div>
                 <div className="action-btn">
-                    <CustomButton disabled={ !(selectedTitle && selectedAuthor) } onClick={navigateToPoemPage} />
+                    <CustomButton disabled={ !(selectedTitle && selectedAuthor) } onClick={navigateToPoemPage}>Search Poem</CustomButton>
                 </div>
             </div>
         </div>

@@ -11,7 +11,19 @@
     }
 }
 
-.not-found {
-    color: #fd3a69;
-    font: 16px/32px 'Open Sans Semibold';
+
+.footer-content {
+    padding: 30px 0 0;
+
+    .not-found {
+        color: #fd3a69;
+        font: 16px/32px 'Open Sans Regular';
+        width: 25%;
+    }
+
+    .action-btn {
+        width: 100px;
+    }
+
 }
+

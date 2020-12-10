@@ -72,16 +72,22 @@
                     }
                 </div>
 
+                <div className="footer-content">
+                    <p className="not-found">
+                        <em>
+                            Rhyme scheme: 
+                            { setRhymeStatus && <span> AA BB</span> } 
+                            { !setRhymeStatus && <span> not found!</span> }
+                        </em>
+                    </p>
+                    <div className="action-btn">
+                        <CustomButton onClick={navigateToPoemPage}>Back to Home Page</CustomButton>
+                    </div>
+                </div>
 
-                <p className="not-found"  >
-                    <em>
-                        Rhyme scheme: 
-                        { setRhymeStatus && <span  >AA BB</span> } 
-                        { !setRhymeStatus && <span>not found!</span> }
-                    </em>
-                </p>
+                
 
-                <CustomButton onClick={navigateToPoemPage} />
+                
             </div>
         )
     }

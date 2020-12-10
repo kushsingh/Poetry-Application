@@ -9,9 +9,10 @@
     const PoemPage = () => {
         const { author, poetryTitle } = useContext(globalContext);
         const [ poemLines, setPoem ] = useState([]);
-        const [rhymeStatus, setRhymeStatus] = useState(false);
+        const [ rhymeStatus, setRhymeStatus ] = useState(false);
         const  history  = useHistory();
 
+        // created method to get the poems and pass to UI as well as isRhymingScheme 
         const getPoemLineByLine = async () => {
             const poemLines = await getPoem ( author, poetryTitle );
 
@@ -23,6 +24,7 @@
             }
         }
 
+        // careted this method to send lines to isRhyming method for the validation
         const isRhymingScheme = (lines) => {
             let rhymeStatus = false;
 
@@ -35,6 +37,7 @@
             return setRhymeStatus(rhymeStatus);
         }
         
+        // Created method to validated rhyme scheme as it contains at least one couplete
         const isRhyming = (currentIndes, linesArr) => {
 
             if (currentIndes === linesArr.length - 1) {
@@ -46,10 +49,12 @@
             return (curLineLastChar === nextLineLastChar)
         }
 
+        // This method has been created to navigate homepage
         const navigateToPoemPage = () => {
             history.push('/')
         } 
 
+        // In UseEffect called getPoemLineByLine method to get Poem 
         useEffect(() => {
             if (author && poetryTitle) {
                 getPoemLineByLine()

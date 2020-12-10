@@ -6,6 +6,7 @@ export class Autocomplete extends Component {
         options: PropTypes.instanceOf(Array).isRequired
     };
 
+    // initial state
     state = {
         activeOption: 0,
         filteredOptions: [],
@@ -13,6 +14,7 @@ export class Autocomplete extends Component {
         userInput: ''
     };
 
+    // Call this method on change event
     onChange = (e) => {
         const { options } = this.props;
         const userInput = e.currentTarget.value;
@@ -30,6 +32,7 @@ export class Autocomplete extends Component {
         });
     };
 
+    // Call this method onsalect item fro the list
     onClick = (e) => {
         this.setState({
             activeOption: 0,
@@ -39,6 +42,7 @@ export class Autocomplete extends Component {
         });
         this.props.onChange && this.props.onChange(e.currentTarget.innerText)
     };
+
 
     onKeyDown = (e) => {
         const { activeOption, filteredOptions } = this.state;

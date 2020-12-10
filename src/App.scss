@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $normal-text-color;
+  font-size: 14px;
+  background-color: $base-color;
+}
+
+a {
+  color: $primary-call-action;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline
+  }
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}

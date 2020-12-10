@@ -1,0 +1,24 @@
+@import './../../variables.scss';
+
+.custom-button {
+    border: 0;
+            color: #fff;
+            font: 600 18px/30px 'Open Sans Regular';
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            transition: 0.3s;
+            background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+
+    &:hover {
+        background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
+    }
+    &:focus {
+        outline: 1px solid transparent;
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+}

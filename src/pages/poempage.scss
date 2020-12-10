@@ -1,0 +1,17 @@
+@import './../variables.scss';
+
+.poetry-content {
+    .poetry-lines {
+        color: $normal-text-color;
+        font: 20px/30px 'Open Sans Regular';
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.not-found {
+    color: #fd3a69;
+    font: 16px/32px 'Open Sans Semibold';
+}
